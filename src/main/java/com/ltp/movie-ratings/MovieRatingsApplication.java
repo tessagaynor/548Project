@@ -8,3 +8,5 @@ public class MovieRatingsApplication {
 		SpringApplication.run(MovieRatingsApplication.class, args);
 }
 }
+
+//comment

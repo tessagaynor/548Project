@@ -6,3 +6,5 @@ public class Constants {
     public static final String FAILED_STATUS = "failed";
     public static final String[] GENRES = new String[] {"Romance", "Comedy", "Horror", "Thriller", "Sci-Fi", "Action", "Drama", "Adventure", "Animation", "Mystery", "Fantasy"};
     public static final String[] RATES = new String[] {"1", "2", "3", "4", "5"};
+
+    //coment
