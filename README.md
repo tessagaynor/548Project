@@ -34,3 +34,8 @@ The Movie Rating System is a web application that allows users to manage a list 
 4. After editing, click the "Update" button to save changes.
 5. View the added and deleted movies at the bottom of the "Edit Movie" page.
 
+## What to Expect
+
+<img width="445" alt="Screenshot 2023-11-28 at 4 14 29 PM" src="https://github.com/tessagaynor/548Project/assets/142341745/a8f8c93a-f203-473f-99de-0ccc313a9b48">
+<img width="1422" alt="Screenshot 2023-11-28 at 4 16 47 PM" src="https://github.com/tessagaynor/548Project/assets/142341745/91a7e913-989b-4591-8bca-ccbea0b43425">
+
