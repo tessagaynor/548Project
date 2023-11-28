@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movie Rating System</title>
+</head>
+<body>
+    <h2>Movies</h2>
+    <div>
+        <ul>
+            <li th:each="movie : ${movies}">
+                <span th:text="${movie.title}">Movie Title</span>,
+                <span th:text="${movie.genre}">Genre</span>,
+                <span th:text="${movie.releaseDate}">Release Date</span>,
+                <span th:text="${movie.rating}">Rating</span>
+                <a th:href="@{/movies/edit/{id}(id=${movie.id})}">Edit</a>
+                <a th:href="@{/movies/delete/{id}(id=${movie.id})}">Delete</a>
+            </li>
+        </ul>
+    </div>
+    <h3>Add a Movie</h3>
+    <div>
+        <form th:action="@{/movies/add}" th:object="${newMovie}" method="post">
+            <input type="text" th:field="*{title}" placeholder="Title" required />
+            <input type="text" th:field="*{genre}" placeholder="Genre" required />
+            <input type="date" th:field="*{releaseDate}" placeholder="Release Date" required />
+            <input type="number" th:field="*{rating}" placeholder="Rating" min="1" max="5" required />
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>
