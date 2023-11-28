@@ -2,6 +2,64 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Movie Rating System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+ 
+        h2 {
+            color: #333;
+        }
+ 
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+ 
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+ 
+        form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            width: 300px;
+            margin: auto;
+        }
+ 
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+           padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+ 
+        a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <h2>Movies</h2>
@@ -17,12 +75,13 @@
             </li>
         </ul>
     </div>
+ 
     <h3>Add a Movie</h3>
     <div>
         <form th:action="@{/movies/add}" th:object="${newMovie}" method="post">
             <input type="text" th:field="*{title}" placeholder="Title" required />
             <input type="text" th:field="*{genre}" placeholder="Genre" required />
-            <input type="date" th:field="*{releaseDate}" placeholder="Release Date" required />
+            <input type="date" th:field="*{releaseDate}" required />
             <input type="number" th:field="*{rating}" placeholder="Rating" min="1" max="5" required />
             <button type="submit">Add</button>
         </form>
